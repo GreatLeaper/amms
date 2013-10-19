@@ -1,0 +1,12 @@
+=form_for @color do |form|
+
+  =form.label :name
+  =form.text_field :name
+
+  p
+    | Upload an image (partial of course)
+
+  p
+    | Description to be added too.
+
+  =form.submit

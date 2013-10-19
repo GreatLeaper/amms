@@ -1,0 +1,11 @@
+=form_for @hook do |form|
+
+  div
+    =form.label :hook_type
+    =form.select :hook_type, Hook::HOOK_TYPES
+
+  div
+    =form.label :size
+    =form.text_field :size
+
+  =form.submit

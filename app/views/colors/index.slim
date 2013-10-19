@@ -1,0 +1,19 @@
+p =link_to 'Create New Color', new_color_path
+
+table width="100%"
+  thead
+    tr
+      th Color
+      th Preview Image
+      th Actions
+  tbody
+    - @colors.each do |color|
+      tr
+        td= color.name
+        td after i add an image
+        /!td= image_tag charity.image.image.url, :size => "45x45"
+        td
+          ul
+            = link_to "Edit", edit_color_path(color)
+            = " | "
+            = link_to('Delete', { action: 'destroy', id: color }, method: :delete, confirm: "Are you sure?")
