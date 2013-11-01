@@ -8,7 +8,7 @@ class Color < ActiveRecord::Base
 
   # Associations #############################################################
 
-  belongs_to :lures
+  has_one :lure
 
   # Scopes ###################################################################
 

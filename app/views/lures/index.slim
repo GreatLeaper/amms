@@ -1,0 +1,23 @@
+p=flash[:notice]
+p=link_to 'Create New Lure', new_lure_path
+
+table width="100%"
+  thead
+    tr
+      th Name
+      th Hook
+      th Color
+      th Depth
+      th Actions
+  tbody
+    - @lures.each do |lure|
+      tr
+        td= lure.name
+        td= lure.hooks_list
+        td= lure.color.blank? ? '<none>' : lure.color.name
+        td= lure.depth
+        td
+          ul
+            = link_to "Edit", edit_lure_path(lure)
+            = " | "
+            = link_to('Delete', { action: 'destroy', id: lure }, method: :delete, confirm: "Are you sure?")

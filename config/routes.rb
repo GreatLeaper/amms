@@ -10,6 +10,7 @@ Amms::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
+  resources :lures, only: [:index, :edit, :update, :new, :create, :destroy]
   resources :colors, only: [:index, :edit, :update, :new, :create, :destroy]
   resources :hooks, only: [:index, :edit, :update, :new, :create, :destroy]
 
