@@ -1,0 +1,31 @@
+
+.kpanel {
+    margin: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 21px 17px #000000;
+}
+
+.kcenter {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.ktable {
+    box-shadow: 2px 2px 15px 1px #53036D;
+    border-radius: 4px;
+    border-collapse:collapse;
+    th{
+      text-align: left;
+      color: #000000;
+      border: 1px solid black;
+      padding: 7px;
+    }
+    td{
+      color: #7B179B;
+      border: 1px solid black;
+      padding: 5px;
+    }
+}
+

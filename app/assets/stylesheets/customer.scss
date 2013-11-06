@@ -1,0 +1,173 @@
+@import "compass";
+
+@font-face {
+  font-family: aml_header_font;
+  src: url('fonts/BLUEHIGL.TTF');
+}
+
+@font-face {
+  font-family: aml_default_font;
+  src: url('fonts/CFB1 American Patriot Normal.ttf');
+}
+
+a:link, a:hover {
+  color: #B114E4;
+}
+
+a:hover {
+  color: #B114E4;
+}
+
+p.customfont { 
+  font-family: aml_default_font, Verdana;
+  font-size: 18px;
+  line-height: 135%
+}
+
+.bg_underwater {
+  background-image: url("underwater.png");
+  background-size:cover;
+}
+
+.body {
+  font-family: aml_default_font, Verdana;
+  margin: 20px;
+
+  //background: #ffffff url("bg.png") no-repeat bottom right;
+
+// light blue sky brown bottom
+//background-color: #a8b8c1;
+//@include filter-gradient(#a8b8c1, #cca37a, vertical);
+//@include background-image(linear-gradient(top,  #00C1F2 0%,#eaeaea 22%,#eaeaea 55%,#cca37a 100%));
+
+ background-color: #8e857f;
+ @include filter-gradient(#8e857f, #cca37a, vertical);
+ @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 15%,#eaeaea 60%,#020B4B 100%));
+
+}
+
+.amlfont {
+  font-family: aml_header_font, Verdana;
+  font-weight: normal;
+}
+
+.shadow {
+  color: #000000;
+  text-shadow: 1px 1px #ffffff
+}
+
+.body h1 {
+  font-size: 64px;
+}
+
+.body h2 {
+  font-size: 48px;
+}
+
+.body h3 {
+  font-size: 42px;
+}
+
+.body h4 {
+  font-size: 36px;
+}
+
+.body h5 {
+  font-size: 32px;
+}
+
+.body h6 {
+  font-size: 22px;
+}
+
+.underline {
+  border-bottom: 2px solid #000000;
+}
+
+.wrapper {
+  margin: 0 auto;
+  #width: 720px;
+}
+
+.content {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.home-header .main-nav{
+  top:260px;
+  left:10px;
+  width:100%;
+  float:left;
+}
+.home-header .main-nav ul{
+  margin-top: 5px;
+}
+.home-header .main-nav ul li{
+  list-style:none;
+  display:inline;
+  padding: 10px;
+}
+.home-header .main-nav ul li {
+  color:#222222;
+  font-size:18px;
+  text-decoration:none;
+  padding: 10px;
+  text-shadow: 1px -1px 0 #aaaaaa;
+}
+
+.home-header .main-nav ul li {
+  #color:#b16565;
+  color:#00000;
+  text-shadow: 1px -1px 0 #00e1e1;
+}
+
+.home-header .login-nav {
+  position: relative;
+  top: 1px;
+  width: 365px;
+  float: right;
+  text-align: right;
+  right: 70px;
+  margin-right: -10px;
+}
+
+.home-header .login-nav ul {
+}
+
+.home-header .login-nav ul li {
+  list-style:none;
+  display:inline;
+  padding: 10px;
+}
+
+.home-header .login-nav ul li a {
+  color:#222222;
+  font-size:14px;
+  text-decoration:none;
+}
+
+
+.footer {
+  background-color: #000000;
+  text-align:center;
+  margin-top:30px;
+  margin-left:-20px;
+  margin-right:-20px;
+  margin-bottom:-20px;
+  padding:4.5px 0 1px;
+  border-top:2px solid #dfdfdf;
+  border-top-style: groove;
+}
+
+.footer p {
+  margin:16px 0;
+  font-size:12px;
+  color: #ffffff;
+}
+

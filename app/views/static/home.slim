@@ -1,0 +1,61 @@
+div.content
+  div#container
+    div#home-slider
+      div#slides-home
+        div.slides_container
+          a href="/lures"
+            =image_tag("slider/slide-1.jpg")
+          a href="https://www.facebook.com/pages/Angry-Monkey-Fishing-Lures/140672516118134" target="_blank"
+            =image_tag("slider/slide-2.png")
+          a href="#"
+            =image_tag("slider/slide-3.png")
+        a.prev href="#"
+          =image_tag("slider/arrow-prev.png")
+        a.next
+          =image_tag("slider/arrow-next.png")
+      =image_tag("slider/frame-black.png", id: "frame")
+
+  div
+
+    div style="width:930px;margin:0 auto;"
+      div.kpanel
+        center
+          h6 The Angry Monkey makes premium cedar fishing lures for fresh waters.
+          table
+            tr
+              td valign="top"
+                =image_tag("monkey_head.png", size: "96x96")
+              td
+                p.customfont.triangle-border.left "To catch a mean fish, you need a mean lure."
+
+        table width="100%" cellpadding="10"
+          tr
+            td width="37%" align="center" valign="top"
+
+              h6.underline See Our Lures
+
+              =link_to(image_tag("lures/DSC_1378.png", width: "200px"), lures_path)
+              =link_to(image_tag("lures/DSC_1376.png", width: "200px"), lures_path)
+
+            td width="26%" align="center" valign="top"
+
+              h6.underline About Us
+
+              =link_to(image_tag("photos/tom_1.png", size: "128x128"), "/about")
+
+            td width="37%" align="center" valign="top"
+
+              h6.underline Connect With The Monkey
+
+              table
+                tr
+                  td align="center" valign="top"
+                    =link_to(image_tag("icons/facebook_logo.png"), "https://www.facebook.com/pages/Angry-Monkey-Fishing-Lures/140672516118134")
+                  td align="center" valign="top"
+                    =link_to(image_tag("icons/twitter_logo.png"), "https://twitter.com/AngryMonkeyLure")
+                tr
+                  td align="center" valign="top"
+                    =image_tag("icons/youtube_logo.jpg")
+                  td align="center" valign="top"
+                    =link_to(image_tag("icons/gmail_logo.jpg"), "mailto:angrymonkeylures@gmail.com")
+
