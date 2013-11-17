@@ -1,0 +1,37 @@
+div
+  center
+    br
+
+- @lures.each do |lure|
+
+  div.kpanel.kcenter.bg_underwater style="width: 750px"
+
+    div.kcenter
+
+      table width="100%"
+        tr
+          td
+            h2.shadow
+              =lure.name
+        tr
+          td align="center"
+            =image_tag("lures/fb1-chubx.png", width: "550px")
+
+  br
+  br
+  br
+  br
+
+div.kpanel.kcenter.bg_underwater style="width: 750px"
+
+  div.kcenter
+
+    table width="100%"
+      tr
+        td
+          h2.shadow
+            | Tom's Dislocated Minnow
+      tr
+        td
+          =image_tag("lures/tdm2-green_sunfish.png", width: "550px")
+

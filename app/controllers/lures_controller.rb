@@ -1,9 +1,22 @@
 class LuresController < ApplicationController
 
-  layout "amms"
+  if 1==1
+    layout "customer"
+  else
+    layout "amms"
+  end
 
   def index
     @lures = Lure.all
+    if 1==1
+      render 'dashboard'
+    else
+      render 'index'
+    end
+  end
+
+  def show
+    @lure = Lure.find(params[:id])
   end
 
   def new

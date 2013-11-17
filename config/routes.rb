@@ -11,12 +11,9 @@ Amms::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
   match 'about/' => 'static#tom'
 
-  resources :lures, only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :lures,  only: [:index, :edit, :update, :new, :create, :destroy, :show]
   resources :colors, only: [:index, :edit, :update, :new, :create, :destroy]
-  resources :hooks, only: [:index, :edit, :update, :new, :create, :destroy]
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :hooks,  only: [:index, :edit, :update, :new, :create, :destroy]
 
   # Sample resource route with options:
   #   resources :products do

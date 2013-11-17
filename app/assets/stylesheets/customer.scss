@@ -33,13 +33,6 @@ p.customfont {
   font-family: aml_default_font, Verdana;
   margin: 20px;
 
-  //background: #ffffff url("bg.png") no-repeat bottom right;
-
-// light blue sky brown bottom
-//background-color: #a8b8c1;
-//@include filter-gradient(#a8b8c1, #cca37a, vertical);
-//@include background-image(linear-gradient(top,  #00C1F2 0%,#eaeaea 22%,#eaeaea 55%,#cca37a 100%));
-
  background-color: #8e857f;
  @include filter-gradient(#8e857f, #cca37a, vertical);
  @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 15%,#eaeaea 60%,#020B4B 100%));
@@ -89,10 +82,9 @@ p.customfont {
   #width: 720px;
 }
 
-.content {
-  margin: 0 auto;
-  width: 100%;
-}
+////////////////////////////////////////////
+// HEADER
+////////////////////////////////////////////
 
 .home-header {
   text-align: center;
@@ -152,6 +144,34 @@ p.customfont {
   text-decoration:none;
 }
 
+////////////////////////////////////////////
+// CONTENT
+////////////////////////////////////////////
+
+.content {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#slider-home { height: 450px; overflow:hidden; }
+#slider-home .frame { position: absolute; margin-left: 55px; }
+#slider-home .viewport { float: left; width: 860px; height: 417px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 23px; margin-left: 43px; }
+#slider-home .buttons { position: relative; display: block; margin: 30px 10px 0 0; float: left; }
+#slider-home .buttons.prev { background:url("carousel/arrow-prev.png") no-repeat; width: 24px; height: 43px; left: 31px; top: 155px; }
+#slider-home .buttons.next { background:url("carousel/arrow-next.png") no-repeat; width: 24px; height: 43px; left: 18px; top: 155px; }
+#slider-home .disable { visibility: hidden; }
+#slider-home .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider-home .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}
+
+#slider-tom { overflow:hidden; }
+#slider-tom .viewport { float: left; width: 330px; height: 330px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 90px; margin-left: 43px; }
+#slider-tom .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider-tom .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}
+
+////////////////////////////////////////////
+// FOOTER
+////////////////////////////////////////////
 
 .footer {
   background-color: #000000;
