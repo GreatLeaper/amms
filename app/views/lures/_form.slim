@@ -1,8 +1,16 @@
-=form_for @lure do |form|
+=form_for @lure, :html => {multipart: true} do |form|
 
   div
     =form.label :name
     =form.text_field :name
+
+  div
+    =form.label :image
+    =form.file_field :image
+    - if @lure.image.present?
+      br
+      =image_tag @lure.image.url.to_s, size: "200x100"
+      | (not actual size)
 
   div
     =form.label 'Weight (oz)'

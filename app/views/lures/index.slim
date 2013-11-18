@@ -5,6 +5,7 @@ table width="100%"
   thead
     tr
       th Name
+      th Image
       th Hook
       th Color
       th Depth
@@ -13,6 +14,10 @@ table width="100%"
     - @lures.each do |lure|
       tr
         td= lure.name
+        - if lure.image.present?
+          td= image_tag lure.image.url.to_s, size: "100x50"
+        - else
+          td= "<none>"
         td= lure.hooks_list
         td= lure.color.blank? ? '<none>' : lure.color.name
         td= lure.depth

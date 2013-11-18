@@ -1,6 +1,6 @@
 class LuresController < ApplicationController
 
-  if 1==1
+  if 1==2
     layout "customer"
   else
     layout "amms"
@@ -8,7 +8,7 @@ class LuresController < ApplicationController
 
   def index
     @lures = Lure.all
-    if 1==1
+    if 1==2
       render 'dashboard'
     else
       render 'index'

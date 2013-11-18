@@ -1,7 +1,10 @@
 class Lure < ActiveRecord::Base
 
   # for mass assignment
-  attr_accessible(:name, :weight, :depth, :color_id, :lure_hooks)
+  attr_accessible :name, :weight, :depth, :image, :color_id, :lure_hooks
+
+  # Carrierwave
+  mount_uploader :image, ImageUploader
 
   # Constants ################################################################
   # Validations ##############################################################
