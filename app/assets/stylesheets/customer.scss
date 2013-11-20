@@ -35,7 +35,7 @@ p.customfont {
 
  background-color: #8e857f;
  @include filter-gradient(#8e857f, #cca37a, vertical);
- @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 15%,#eaeaea 60%,#020B4B 100%));
+ @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 20%,#eaeaea 94%,#8e857f 100%));
 
 }
 
@@ -51,30 +51,37 @@ p.customfont {
 
 .body h1 {
   font-size: 64px;
+  font-weight: normal;
 }
 
 .body h2 {
   font-size: 48px;
+  font-weight: normal;
 }
 
 .body h3 {
   font-size: 42px;
+  font-weight: normal;
 }
 
 .body h4 {
   font-size: 36px;
+  font-weight: normal;
 }
 
 .body h5 {
   font-size: 32px;
+  font-weight: normal;
 }
 
 .body h6 {
   font-size: 22px;
+  font-weight: normal;
 }
 
 .underline {
-  border-bottom: 2px solid #000000;
+  border-bottom: 1px solid #000000;
+  width: 95%;
 }
 
 .wrapper {
@@ -156,10 +163,10 @@ p.customfont {
 
 #slider-home { height: 450px; overflow:hidden; }
 #slider-home .frame { position: absolute; margin-left: 55px; }
-#slider-home .viewport { float: left; width: 860px; height: 417px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 23px; margin-left: 43px; }
+#slider-home .viewport { float: left; width: 854px; height: 371px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 23px; margin-left: 43px; box-shadow: 0px 0px 10px 1px; }
 #slider-home .buttons { position: relative; display: block; margin: 30px 10px 0 0; float: left; }
-#slider-home .buttons.prev { background:url("carousel/arrow-prev.png") no-repeat; width: 24px; height: 43px; left: 31px; top: 155px; }
-#slider-home .buttons.next { background:url("carousel/arrow-next.png") no-repeat; width: 24px; height: 43px; left: 18px; top: 155px; }
+#slider-home .buttons.prev { background:url("carousel/arrow-prev.png") no-repeat; width: 24px; height: 43px; left: 49px; top: 155px; }
+#slider-home .buttons.next { background:url("carousel/arrow-next.png") no-repeat; width: 24px; height: 43px; left: 4px; top: 155px; }
 #slider-home .disable { visibility: hidden; }
 #slider-home .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
 #slider-home .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}
@@ -168,6 +175,15 @@ p.customfont {
 #slider-tom .viewport { float: left; width: 330px; height: 330px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 90px; margin-left: 43px; }
 #slider-tom .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
 #slider-tom .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}
+
+// Easy Tabs
+.etabs { margin: 0; padding: 0; }
+.tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
+.tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
+.tab a:hover { text-decoration: underline; }
+.tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
+.tab a.active { font-weight: bold; }
+.tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
 
 ////////////////////////////////////////////
 // FOOTER

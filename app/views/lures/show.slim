@@ -1,0 +1,35 @@
+div.kpanel.kcenter style="width: 950px"
+
+  div.kcenter
+
+    h2=@lure.name
+
+    =image_tag @lure.image.url.to_s, width: "600px"
+
+    h6 One MEAN lure!
+
+    div.tab-container#tab-container
+      ul.etabs
+        li.tab
+          =link_to "Description", "#description"
+        li.tab
+          =link_to "Specifications", "#specs"
+        li.tab
+          =link_to "Colors", "#colors"
+        li.tab
+          =link_to "Video", "#video"
+      div#description
+        h2 HTML Markup for these tabs
+        p lalalala lalalala lalalala lalalala
+      div#specs
+        h2 JS for these tabs
+        p lalfer wuhg342 fer wuhg342 lalfer wuhg342 fer wuhg342 lafer wuhg342fer wuhg342 lalalala
+        br
+        p lalfer wuhg342 fer wuhg342 lalfer wuhg342 fer wuhg342 lafer wuhg342fer wuhg342 lalalala
+      div#colors
+        h2 CSS Styles for these tabs
+        p reg erh lalreg erh lalalareg erh lalalala
+      div#video
+        h2 Put video here
+
+

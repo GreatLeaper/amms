@@ -5,4 +5,6 @@ $(document).ready(function(){
   // Start the slider carousel on Tom's page
   $('#slider-tom').tinycarousel( { interval: true, intervaltime: 8000, duration: 6000 } );
 
+  // Easy tabs.  Should this be here?  probably not
+  $('#tab-container').easytabs();
 });
