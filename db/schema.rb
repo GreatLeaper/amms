@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131118024354) do
+ActiveRecord::Schema.define(:version => 20131125031818) do
 
   create_table "colors", :force => true do |t|
     t.string   "name",       :null => false
@@ -28,23 +28,29 @@ ActiveRecord::Schema.define(:version => 20131118024354) do
 
   add_index "hooks", ["hook_type", "size"], :name => "index_hooks_on_type_and_size"
 
-  create_table "lure_hooks", :force => true do |t|
-    t.integer "lure_id"
-    t.integer "hook_id"
-  end
-
-  add_index "lure_hooks", ["hook_id"], :name => "index_lure_hooks_on_hook_id"
-  add_index "lure_hooks", ["lure_id"], :name => "index_lure_hooks_on_lure_id"
-
-  create_table "lures", :force => true do |t|
+  create_table "lure_types", :force => true do |t|
     t.string   "name",       :null => false
-    t.integer  "weight"
+    t.decimal  "length"
+    t.decimal  "weight"
     t.integer  "depth"
     t.integer  "bill_id"
+    t.integer  "hook_id"
     t.integer  "color_id"
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "image"
   end
+
+  create_table "lures", :force => true do |t|
+    t.string   "code",                            :null => false
+    t.integer  "lure_type_id",                    :null => false
+    t.integer  "color_id"
+    t.boolean  "active",       :default => false
+    t.string   "image"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "lures", ["code"], :name => "index_lures_on_code", :unique => true
 
 end

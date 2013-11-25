@@ -1,7 +1,7 @@
 class Lure < ActiveRecord::Base
 
   # for mass assignment
-  attr_accessible :name, :weight, :depth, :image, :color_id, :lure_hooks
+  attr_accessible :code, :lure_type_id, :color_id
 
   # Carrierwave
   mount_uploader :image, ImageUploader
@@ -11,17 +11,10 @@ class Lure < ActiveRecord::Base
 
   # Associations #############################################################
 
-  has_many :lure_hooks, dependent: :destroy
-  has_many :hooks, through: :lure_hooks
+  belongs_to :lure_type
   belongs_to :color
-  #has_one :bill
-  #has_many :swivels
 
   # Scopes ###################################################################
-
-  def hooks_list
-    hooks.all.map(&:size)
-  end
 
   private
 

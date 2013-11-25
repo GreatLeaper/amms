@@ -11,8 +11,7 @@ class Hook < ActiveRecord::Base
 
   # Associations #############################################################
 
-  has_many :lure_hooks
-  has_many :lures, through: :lure_hooks
+  has_one :lure_type
 
   # Scopes ###################################################################
 
