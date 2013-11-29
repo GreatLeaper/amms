@@ -4,23 +4,21 @@ p=link_to 'Create New Lure', new_lure_path
 table width="100%"
   thead
     tr
-      th Name
+      th Lure Type
       th Image
-      th Hook
       th Color
-      th Depth
+      th Code
       th Actions
   tbody
     - @lures.each do |lure|
       tr
-        td= lure.name
+        td= lure.lure_type.name
         - if lure.image.present?
           td= image_tag lure.image.url.to_s, size: "100x50"
         - else
           td= "<none>"
-        td= lure.hooks_list
         td= lure.color.blank? ? '<none>' : lure.color.name
-        td= lure.depth
+        td= lure.code
         td
           ul
             = link_to "Edit", edit_lure_path(lure)

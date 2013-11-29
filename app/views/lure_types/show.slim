@@ -1,0 +1,33 @@
+div.kcenter.kpanel
+
+  h2=@lure_type.name
+
+  =image_tag @lure_type.image.url.to_s, width: "600px"
+
+  div
+
+    div#tab-container.tab-container
+      ul.etabs
+        li.tab
+          =link_to "Description", "#description"
+        li.tab
+          =link_to "Specifications", "#specs"
+        li.tab
+          =link_to "Colors", "#colors"
+        li.tab
+          =link_to "Video", "#video"
+      div.panel-container style="height:338px;"
+        div#description
+          div style="height:338px;"
+            p This lure does this.  It is awesome.  Watch it catch fish.
+            p It is best for bass, pike....
+            p Check out the kill dot
+        div#specs
+          div style="height:338px;"
+            =render partial: 'lure_types/specifications', locals: { lure_type: @lure_type }
+        div#colors
+          div style="height:338px;"
+            =render partial: 'lure_types/colors', locals: { lures: @lure_type.lures }
+        div#video
+          div style="height:338px;"
+            p Here is the video of this lure in action!

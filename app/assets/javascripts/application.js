@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.tinycarousel.min
+//= require jquery.roundabout.min
 //= require jquery.easytabs.min
 //= require statics

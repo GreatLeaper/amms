@@ -1,0 +1,30 @@
+p=flash[:notice]
+p=link_to 'Create New Lure Type', new_lure_type_path
+
+table width="100%"
+  thead
+    tr
+      th Name
+      th Image
+      th Hook
+      th Depth
+      th Length
+      th Weight
+      th Actions
+  tbody
+    - @lure_types.each do |lure_type|
+      tr
+        td= lure_type.name
+        - if lure_type.image.present?
+          td= image_tag lure_type.image.url.to_s, size: "100x50"
+        - else
+          td= "<none>"
+        td= lure_type.hook_id
+        td= lure_type.depth
+        td= lure_type.length
+        td= lure_type.weight
+        td
+          ul
+            = link_to "Edit", edit_lure_type_path(lure_type)
+            = " | "
+            = link_to('Delete', { action: 'destroy', id: lure_type }, method: :delete, confirm: "Are you sure?")

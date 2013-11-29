@@ -1,0 +1,38 @@
+=form_for @lure_type, :html => {multipart: true} do |form|
+
+  div
+    =form.label :name
+    =form.text_field :name
+
+  div
+    =form.label :image
+    =form.file_field :image
+    - if @lure_type.image.present?
+      br
+      =image_tag @lure_type.image.url.to_s, size: "200x100"
+      | (not actual size)
+
+  div
+    =form.label 'Length (in)'
+    =form.text_field :length, { size: 7 }
+
+  div
+    =form.label 'Weight (oz)'
+    =form.text_field :weight, { size: 7 }
+
+  div
+    =form.label 'Depth (feet)'
+    =form.text_field :depth, { size: 7 }
+
+  div
+    =form.label Hook
+    p "drop down"
+    
+  div
+    =form.label "Bill"
+    p "drop down"
+    
+
+    p Description of course
+
+  =form.submit

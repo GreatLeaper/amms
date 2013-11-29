@@ -7,4 +7,7 @@ $(document).ready(function(){
 
   // Easy tabs.  Should this be here?  probably not
   $('#tab-container').easytabs();
+
+  // Colors Roundabout
+  $('#rb-colors').roundabout({ minOpacity: .4 });
 });

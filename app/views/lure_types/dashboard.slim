@@ -1,0 +1,23 @@
+div
+  center
+    br
+
+- @lure_types.each do |lure_type|
+
+  div.kpanel.kcenter.bg_underwater style="width: 750px"
+
+    div.kcenter
+
+      table width="100%"
+        tr
+          td
+            h2.shadow
+              =lure_type.name
+        tr
+          td align="center"
+            =link_to image_tag(lure_type.image.url.to_s, width: "550px"), lure_type_path(lure_type)
+
+  br
+  br
+  br
+  br

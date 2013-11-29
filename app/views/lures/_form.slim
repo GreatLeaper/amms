@@ -1,8 +1,8 @@
 =form_for @lure, :html => {multipart: true} do |form|
 
   div
-    =form.label :name
-    =form.text_field :name
+    =form.label "Lure Type"
+    =form.collection_select :lure_type_id, LureType.all, :id, :name, include_blank: true
 
   div
     =form.label :image
@@ -13,29 +13,15 @@
       | (not actual size)
 
   div
-    =form.label 'Weight (oz)'
-    =form.text_field :weight, { size: 6 }
+    =form.label :code
+    =form.text_field :code
 
   div
-    =form.label :depth
-    =form.text_field :depth, { size: 15 }
+    =form.label :active
+    =form.check_box :active
 
   div
     =form.label Color
     =form.collection_select :color_id, Color.all, :id, :name, include_blank: true
-
-  div
-    h4 Hooks
-    - @lure.hooks.each do |hook|
-      p=hook.size
-    
-  p Add a simple way to easily add and remove hooks
-
-  div
-    /= form.fields_for :lure_hooks do |hook_form|
-
-      /= hook_form.select :size, Hook.all.map(&:size)
-
-    p Description of course
 
   =form.submit

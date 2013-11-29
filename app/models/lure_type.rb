@@ -11,7 +11,7 @@ class LureType < ActiveRecord::Base
 
   # Associations #############################################################
 
-  has_one :lure
+  has_many :lures
   belongs_to :hook
   #has_one :bill
   #has_one :swivel
