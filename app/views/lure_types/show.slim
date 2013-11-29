@@ -19,9 +19,7 @@ div.kcenter.kpanel
       div.panel-container style="height:338px;"
         div#description
           div style="height:338px;"
-            p This lure does this.  It is awesome.  Watch it catch fish.
-            p It is best for bass, pike....
-            p Check out the kill dot
+            =render partial: 'lure_types/description', locals: { lure: @lure_type }
         div#specs
           div style="height:338px;"
             =render partial: 'lure_types/specifications', locals: { lure_type: @lure_type }
@@ -30,4 +28,4 @@ div.kcenter.kpanel
             =render partial: 'lure_types/colors', locals: { lures: @lure_type.lures }
         div#video
           div style="height:338px;"
-            p Here is the video of this lure in action!
+            =render partial: 'lure_types/video', locals: { lure: @lure_type }
