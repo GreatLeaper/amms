@@ -35,7 +35,7 @@ p.customfont {
 
  background-color: #8e857f;
  @include filter-gradient(#8e857f, #cca37a, vertical);
- @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 20%,#eaeaea 94%,#8e857f 100%));
+ @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 20%,#eaeaea 44%,#000000 100%));
 
 }
 
@@ -57,6 +57,7 @@ p.customfont {
 .body h2 {
   font-size: 48px;
   font-weight: normal;
+  margin: 0px;
 }
 
 .body h3 {
@@ -154,6 +155,12 @@ table p {
   color:#222222;
   font-size:14px;
   text-decoration:none;
+}
+
+.neat {
+ background-color: #8e857f;
+ @include filter-gradient(#8e857f, #cca37a, vertical);
+ @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 34%,#eaeaea 56%,#1F478D 100%));
 }
 
 ////////////////////////////////////////////

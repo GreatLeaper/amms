@@ -1,8 +1,17 @@
 div.kcenter.kpanel
 
-  h2=@lure_type.name
+  div.neat style="text-align:center"
 
-  =image_tag @lure_type.image.url.to_s, width: "600px"
+    br
+    br
+    br
+
+    h2=@lure_type.name
+
+    =image_tag @lure_type.image.url.to_s, width: "600px"
+
+    br
+    br
 
   div
 

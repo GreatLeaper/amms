@@ -5,6 +5,6 @@ div style="padding-left:80px"
   ul#rb-colors
 
     - lures.each do |lure|
-      li
+      li.neat
         =image_tag(lure.image.url.to_s, { width: "300px" })
         h6= "#{lure.color.name} (#{lure.code})"
