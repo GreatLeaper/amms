@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131125031818) do
+ActiveRecord::Schema.define(:version => 20131201004512) do
 
   create_table "colors", :force => true do |t|
     t.string   "name",       :null => false
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20131125031818) do
   add_index "hooks", ["hook_type", "size"], :name => "index_hooks_on_type_and_size"
 
   create_table "lure_types", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name",        :null => false
     t.decimal  "length"
     t.decimal  "weight"
     t.integer  "depth"
@@ -37,8 +37,9 @@ ActiveRecord::Schema.define(:version => 20131125031818) do
     t.integer  "hook_id"
     t.integer  "color_id"
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
   end
 
   create_table "lures", :force => true do |t|

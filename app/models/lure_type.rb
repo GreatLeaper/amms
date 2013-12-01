@@ -1,7 +1,7 @@
 class LureType < ActiveRecord::Base
 
   # for mass assignment
-  attr_accessible :name, :length, :weight, :depth, :image, :hook_id
+  attr_accessible :name, :length, :weight, :depth, :description, :image, :hook_id
 
   # Carrierwave
   mount_uploader :image, ImageUploader
