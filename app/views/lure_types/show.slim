@@ -1,6 +1,6 @@
 div.kcenter.kpanel
 
-  div.neat style="text-align:center"
+  div.neat style="text-align:center;overflow: hidden"
 
     br
     br
@@ -25,7 +25,7 @@ div.kcenter.kpanel
           =link_to "Colors", "#colors"
         li.tab
           =link_to "Video", "#video"
-      div.panel-container style="height:338px;"
+      div.panel-container style="height:338px;overflow: hidden"
         div#description
           div style="height:338px;"
             =render partial: 'lure_types/description', locals: { lure_type: @lure_type }
