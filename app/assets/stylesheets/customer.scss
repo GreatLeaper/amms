@@ -2,12 +2,13 @@
 
 @font-face {
   font-family: aml_header_font;
-  src: url('fonts/BLUEHIGL.TTF');
+  src: url('fonts/CFB1 American Patriot Normal.ttf');
+  //src: url('fonts/BLUEHIGL.TTF');
 }
 
 @font-face {
   font-family: aml_default_font;
-  src: url('fonts/CFB1 American Patriot Normal.ttf');
+  src: url('fonts/ArchitectsDaughter.ttf');
 }
 
 a:link, a:hover {
@@ -21,7 +22,8 @@ a:hover {
 p.customfont { 
   font-family: aml_default_font, Verdana;
   font-size: 18px;
-  line-height: 135%
+  line-height: 135%;
+  color: #b16565;
 }
 
 .bg_underwater {
@@ -50,34 +52,51 @@ p.customfont {
 }
 
 .body h1 {
+  font-family: aml_header_font, Verdana;
   font-size: 64px;
   font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .body h2 {
+  font-family: aml_header_font, Verdana;
   font-size: 48px;
   font-weight: normal;
-  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .body h3 {
+  font-family: aml_header_font, Verdana;
   font-size: 42px;
   font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .body h4 {
+  font-family: aml_header_font, Verdana;
   font-size: 36px;
   font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .body h5 {
+  font-family: aml_header_font, Verdana;
   font-size: 32px;
   font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .body h6 {
+  font-family: aml_header_font, Verdana;
   font-size: 22px;
   font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .underline {
