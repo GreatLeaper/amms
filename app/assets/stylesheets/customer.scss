@@ -19,12 +19,20 @@ a:hover {
   color: #B114E4;
 }
 
-p.customfont { 
-  font-family: aml_default_font, Verdana;
-  font-size: 18px;
-  line-height: 135%;
+.body p {
   color: #b16565;
 }
+
+.body ul li{
+  color: #b16565;
+}
+
+//p.customfont { 
+//  font-family: aml_default_font, Verdana;
+//  font-size: 18px;
+//  line-height: 135%;
+//  color: #b16565;
+//}
 
 .bg_underwater {
   background-image: url("underwater.png");
@@ -215,6 +223,10 @@ table p {
 .tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
 .tab a.active { font-weight: bold; }
 .tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+
+.etabs .tab a {
+  font-family: aml_header_font;
+}
 
 ////////////////////////////////////////////
 // FOOTER

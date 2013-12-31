@@ -25,16 +25,26 @@ div.kcenter.kpanel
           =link_to "Colors", "#colors"
         li.tab
           =link_to "Video", "#video"
+        li.tab
+          =link_to "Tips & Tricks", "#tips"
       div.panel-container style="height:338px;overflow: hidden"
         div#description
           div style="height:338px;"
-            =render partial: 'lure_types/description', locals: { lure_type: @lure_type }
+            div style="height:100%;"
+              =render partial: 'lure_types/description', locals: { lure_type: @lure_type }
         div#specs
           div style="height:338px;"
-            =render partial: 'lure_types/specifications', locals: { lure_type: @lure_type }
+            div style="height:100%;"
+              =render partial: 'lure_types/specifications', locals: { lure_type: @lure_type }
         div#colors
           div style="height:338px;"
-            =render partial: 'lure_types/colors', locals: { lures: @lure_type.lures }
+            div style="height:100%;"
+              =render partial: 'lure_types/colors', locals: { lures: @lure_type.lures }
         div#video
           div style="height:338px;"
-            =render partial: 'lure_types/video', locals: { lure: @lure_type }
+            div style="height:100%;overflow-y:scroll;"
+              =render partial: 'lure_types/video', locals: { lure: @lure_type }
+        div#tips
+          div style="height:338px;"
+            div style="height:100%;overflow-y:scroll;"
+              =render partial: 'lure_types/tips', locals: { lure: @lure_type }
