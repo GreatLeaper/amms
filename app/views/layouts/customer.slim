@@ -27,11 +27,16 @@ body.body
     div.home-header
       =link_to(image_tag("logo_aml_long.png", style: "height: 235px"), root_path)
 
-      hr
+      div.menubar style="text-align:right;"
+        =link_to("Home", root_path)
+        =" "
+        =link_to("Lures", lure_types_path)
+        =" "
+        =link_to("About", about_path)
+        =" "
+        =link_to("Connect", "#")
 
-      / div.main-nav
-      /   ul
-      /     li =link_to("About", "/about")
+      hr
 
     div
       == yield
