@@ -15,6 +15,8 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails'
+  gem 'bourbon', '~> 3.1.4'
+  gem 'neat', '~> 1.2.1' #scss grids
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

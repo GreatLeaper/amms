@@ -1,3 +1,6 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
 @import "compass";
 
 @font-face {
@@ -26,18 +29,6 @@ a:hover {
 
 .body ul li {
   color: #b16565;
-}
-
-//p.customfont { 
-//  font-family: aml_default_font, Verdana;
-//  font-size: 18px;
-//  line-height: 135%;
-//  color: #b16565;
-//}
-
-.bg_underwater {
-  background-image: url("underwater.png");
-  background-size:cover;
 }
 
 .body {
