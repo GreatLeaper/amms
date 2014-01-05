@@ -1,10 +1,10 @@
 p
 
-div style="padding-left:80px"
+div style="margin:0 auto;padding-top:20px;width:600px;"
 
   ul#rb-colors
 
     - lures.each do |lure|
-      li.kpanel
+      li
         =image_tag(lure.image.url.to_s, { width: "300px" })
         h6= "#{lure.color.name} (#{lure.code})"

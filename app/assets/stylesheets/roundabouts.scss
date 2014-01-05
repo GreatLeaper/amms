@@ -1,3 +1,5 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
 
 .roundabout-holder {
       list-style: none;
@@ -7,11 +9,13 @@
       width: 500px;
 }
 .roundabout-in-focus {
+      @include background-image(linear-gradient(top, #8e857f 0%, #eaeaea 28%, #eaeaea 95%, #ffffff 100%));
       cursor: auto;
       height: 200px;
       width: 370px;
       cursor: pointer;
-      #background-color: #eaeaea;
+      background-color: #eaeaea;
+      border: 1px solid #000000;
       box-shadow: 0px 0px 10px 0px;
 }
 .roundabout-moveable-item {
@@ -19,7 +23,7 @@
       width: 370px;
       cursor: pointer;
       background-color: #ffffff;
-      #border: 1px solid #999;
+      //border: 1px solid #eaeaea;
 }
 .roundabout-holder li {
   text-align: center;
