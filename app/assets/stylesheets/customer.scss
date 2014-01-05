@@ -124,7 +124,15 @@ div.lure-dashboard {
   @include span-columns(4);
   @include omega(3n);
   text-align: center;
+
+  a:hover {
+    @include transition(all 500ms ease-in-out);
+    text-shadow: 1px 1px #8e857f;
+  }
+
 }
+
+//////////////////////////////////////
 
 .shadow {
   color: #000000;
@@ -207,6 +215,12 @@ table td {
   color: #000000; //#b16565;
   @include background-image(linear-gradient(top,  #ffffff 0%, #ffcc99 100%));
   padding: 5px;
+
+  a:hover {
+    @include transition(all 500ms ease-in-out);
+    text-shadow: 1px 1px #8e857f;
+  }
+
 }
 
 ////////////////////////////////////////////

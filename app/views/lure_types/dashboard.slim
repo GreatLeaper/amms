@@ -2,10 +2,10 @@
 
   div.lure-dashboard
 
-    div.kpanel style="height:200px"
+    div.kpanel style="height:250px; overflow:hidden;"
 
-      h6.shadow
+      h5
         =link_to image_tag(lure_type.image.url.to_s, width: "250px", height: "100px"), lure_type_path(lure_type)
         br
         br
-        =lure_type.name
+        =link_to lure_type.name, lure_type_path(lure_type)
