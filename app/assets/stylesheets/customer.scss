@@ -1,8 +1,6 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-@import "compass";
-
 @font-face {
   font-family: aml_header_font;
   src: url('fonts/CFB1 American Patriot Normal.ttf');
@@ -20,30 +18,112 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  @include transition(all 500ms ease-in-out);
+  text-shadow: 1px 1px #ffffff;
 }
 
 .body p {
   color: #b16565;
+  text-shadow: 1px 0px #ddd;
 }
 
 .body ul li {
   color: #b16565;
+  text-shadow: 1px 0px #ddd;
 }
 
 .body {
   font-family: aml_default_font, Verdana;
   margin: 20px;
+  @include background-image(linear-gradient(top,  #ffffff 0%, #8e857f 18%, #8e857f 82%, #000000 100%));
+}
 
- background-color: #8e857f;
- @include filter-gradient(#8e857f, #cca37a, vertical);
- @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 20%,#eaeaea 44%,#000000 100%));
+// MAIN LAYOUT
+
+div.wrapper {
+  @include outer-container;
+}
+
+div.home-header {
+  @include span-columns(12);
+  text-align: center;
+}
+
+div.menubar {
+  @include span-columns(12);
+  text-align: right;
+}
+
+div.content {
+  @include outer-container;
+}
+
+//
+// static/home
+//
+
+div.home-slider {
+}
+
+div.home-section-left {
+  @include span-columns(4);
+  text-align: center;
+}
+
+div.home-section-middle {
+  @include span-columns(4);
+  text-align: center;
+}
+
+div.home-section-right {
+  @include span-columns(4);
+  @include omega;
+  text-align: center;
+}
+
+div.home-quote-head {
+  @include span-columns(3);
+  text-align: right;
+}
+
+div.home-quote-text {
+  @include span-columns(6);
+  text-align: left;
+  @include omega;
+}
+
+div.connect-left {
+  @include span-columns(2 of 4);
+  text-align: center;
+}
+
+div.connect-right {
+  @include span-columns(2 of 4);
+  text-align: center;
+  @include omega;
+}
+
+div.connect-bottom {
+  @include span-columns(4 of 4);
+  text-align: center;
+  @include omega;
+  padding-top: 10px;
+
+  a:hover {
+    @include transition(all 500ms ease-in-out);
+    text-shadow: 1px 1px #8e857f;
+  }
 
 }
 
-.amlfont {
-  font-family: aml_header_font, Verdana;
-  font-weight: normal;
+//
+// lure_types/dashboard
+//
+
+div.lure-dashboard {
+  @include span-columns(4);
+  @include omega(3n);
+  text-align: center;
 }
 
 .shadow {
@@ -104,18 +184,10 @@ a:hover {
   width: 95%;
 }
 
-.wrapper {
-  margin: 0 auto;
-  #width: 720px;
-}
-
 table {
   border-collapse: collapse;
   box-shadow: 10px 10px 5px #888888;
   border:1px solid #000000;
-}
-
-table tr {
 }
 
 table th {
@@ -141,68 +213,12 @@ table td {
 // HEADER
 ////////////////////////////////////////////
 
-.home-header {
-  text-align: center;
-  padding: 20px;
-}
-
-.home-header .main-nav{
-  top:260px;
-  left:10px;
-  width:100%;
-  float:left;
-}
-.home-header .main-nav ul{
-  margin-top: 5px;
-}
-.home-header .main-nav ul li{
-  list-style:none;
-  display:inline;
-  padding: 10px;
-}
-.home-header .main-nav ul li {
-  color:#222222;
-  font-size:18px;
-  text-decoration:none;
-  padding: 10px;
-  text-shadow: 1px -1px 0 #aaaaaa;
-}
-
-.home-header .main-nav ul li {
-  #color:#b16565;
-  color:#00000;
-  text-shadow: 1px -1px 0 #00e1e1;
-}
-
-.home-header .login-nav {
-  position: relative;
-  top: 1px;
-  width: 365px;
-  float: right;
-  text-align: right;
-  right: 70px;
-  margin-right: -10px;
-}
-
-.home-header .login-nav ul {
-}
-
-.home-header .login-nav ul li {
-  list-style:none;
-  display:inline;
-  padding: 10px;
-}
-
-.home-header .login-nav ul li a {
-  color:#222222;
-  font-size:14px;
-  text-decoration:none;
-}
-
-.neat {
- background-color: #8e857f;
- @include filter-gradient(#8e857f, #cca37a, vertical);
- @include background-image(linear-gradient(top,  #8e857f 0%,#eaeaea 34%,#eaeaea 99%,#8e857f 100%));
+.kpanel {
+  @include background-image(linear-gradient(top, #8e857f 0%, #eaeaea 28%, #eaeaea 95%, #ffffff 100%));
+  margin: 20px;
+  background-color: #eaeaea;
+  padding: 1px;
+  box-shadow: 0px 0px 10px 0px;
 }
 
 ////////////////////////////////////////////
@@ -213,35 +229,6 @@ table td {
   position: relative;
   margin: 0 auto;
   width: 100%;
-}
-
-#slider-home { height: 450px; overflow:hidden; }
-#slider-home .frame { position: absolute; margin-left: 55px; }
-#slider-home .viewport { float: left; width: 854px; height: 371px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 23px; margin-left: 43px; box-shadow: 0px 0px 10px 1px; }
-#slider-home .buttons { position: relative; display: block; margin: 30px 10px 0 0; float: left; }
-#slider-home .buttons.prev { background:url("carousel/arrow-prev.png") no-repeat; width: 24px; height: 43px; left: 49px; top: 155px; }
-#slider-home .buttons.next { background:url("carousel/arrow-next.png") no-repeat; width: 24px; height: 43px; left: 4px; top: 155px; }
-#slider-home .disable { visibility: hidden; }
-#slider-home .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
-#slider-home .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}
-
-#slider-tom { overflow:hidden; }
-#slider-tom .viewport { float: left; width: 330px; height: 330px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 90px; margin-left: 43px; }
-#slider-tom .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
-#slider-tom .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}
-
-// Easy Tabs
-.etabs { margin: 0; padding: 0; }
-.tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
-.tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
-.tab a:hover { text-decoration: underline; }
-.tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
-.tab a.active { font-weight: bold; }
-.tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
-
-.etabs .tab a {
-  font-family: aml_header_font;
-  color: #000000;
 }
 
 ////////////////////////////////////////////

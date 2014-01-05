@@ -11,6 +11,7 @@
  *= require_self
  *= require customer
  *= require bubbles
- *= require monkey
  *= require roundabouts
+ *= require easytabs
+ *= require sliders
  */

@@ -1,0 +1,14 @@
+#slider-home { height: 450px; overflow:hidden; }
+#slider-home .frame { position: absolute; margin-left: 55px; }
+#slider-home .viewport { float: left; width: 854px; height: 371px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 23px; margin-left: 43px; box-shadow: 0px 0px 10px 1px; }
+#slider-home .buttons { position: relative; display: block; margin: 30px 10px 0 0; float: left; }
+#slider-home .buttons.prev { background:url("carousel/arrow-prev.png") no-repeat; width: 24px; height: 43px; left: 49px; top: 155px; }
+#slider-home .buttons.next { background:url("carousel/arrow-next.png") no-repeat; width: 24px; height: 43px; left: 4px; top: 155px; }
+#slider-home .disable { visibility: hidden; }
+#slider-home .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider-home .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}
+
+#slider-tom { overflow:hidden; }
+#slider-tom .viewport { float: left; width: 330px; height: 330px; overflow: hidden; position: relative; left: 0px; top: -0px; margin-top: 90px; margin-left: 43px; }
+#slider-tom .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider-tom .overview li { float: left; margin: 0 20px 0 0; padding: 0px; height: 121px; width: 900px;}

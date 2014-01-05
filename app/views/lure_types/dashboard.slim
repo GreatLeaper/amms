@@ -1,24 +1,11 @@
-div
-  center
-    br
-
 - @lure_types.each do |lure_type|
 
-  div.kpanel.kcenter.neat style="width: 750px"
+  div.lure-dashboard
 
-    div.kcenter
+    div.kpanel style="height:200px"
 
-      table width="100%"
-        tr
-          td
-            br
-            h3.shadow
-              =lure_type.name
-        tr
-          td align="center"
-            =link_to image_tag(lure_type.image.url.to_s, width: "550px"), lure_type_path(lure_type)
-
-  br
-  br
-  br
-  br
+      h6.shadow
+        =link_to image_tag(lure_type.image.url.to_s, width: "250px", height: "100px"), lure_type_path(lure_type)
+        br
+        br
+        =lure_type.name

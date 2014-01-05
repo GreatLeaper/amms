@@ -1,4 +1,4 @@
-div.content
+div.home-slider
 
   div style="width:1010px;margin:0 auto;"
 
@@ -17,61 +17,43 @@ div.content
               =image_tag("carousel/slide-3.png")
       a.buttons.next href="#"
 
-  div
+div.home-section-left
 
-    table width="100%"
-      tr
-        td width="33%" align="center" valign="middle"
+  div.kpanel style="width:290px; height:245px; "
 
-          div.kpanel.neat style="width:290px; height:245px; "
+    h6.underline See Our Lures
 
-            div style="height: 40px"
+    div style="padding-top: 47px"
+      =link_to(image_tag("lures/tdm2-green_sunfish.png", width: "200px"), lure_types_path)
 
-              h6.underline See Our Lures
+div.home-section-middle
 
-            div style="padding-top: 47px"
-              =link_to(image_tag("lures/tdm2-green_sunfish.png", width: "200px"), lure_types_path)
+  div.kpanel style="width:290px; height:245px; "
 
-        td width="33%" align="center" valign="top"
+    h6.underline About Us
 
-          div.kpanel.neat style="width:290px; height:245px; "
+    div style="padding-top: 22px"
+      =link_to(image_tag("photos/tom_1.png", size: "128x128"), "/about")
 
-            div style="height: 40px"
+div.home-section-right
 
-              h6.underline About Us
+  div.kpanel style="width:290px; height:245px; "
 
-            div style="padding-top: 22px"
-              =link_to(image_tag("photos/tom_1.png", size: "128x128"), "/about")
+    h6.underline Connect With The Monkey
 
-        td width="33%" align="center" valign="top"
+    div.connect-left
+      =link_to(image_tag("icons/facebook_logo.png"), "https://www.facebook.com/pages/Angry-Monkey-Fishing-Lures/140672516118134", { target: "_blank" } )
+    div.connect-right
+      =link_to(image_tag("icons/twitter_logo.png"), "https://twitter.com/AngryMonkeyLure", { target: "_blank" } )
+    div.connect-left
+      =link_to(image_tag("icons/youtube_logo.jpg"), "http://www.youtube.com/user/angrymonkeylures", { target: "_blank" } )
+    div.connect-right
+      =link_to(image_tag("icons/gmail_logo.jpg"), "mailto:angrymonkeylures@gmail.com")
+    div.connect-bottom
+      =link_to("UPCOMING SHOWS", events_path)
 
-          div.kpanel.neat style="width:290px; height:245px; "
+div.home-quote-head
+  =image_tag("monkey_head.png", size: "96x96")
 
-            div style="height: 40px"
-
-              h6.underline Connect With The Monkey
-
-            table
-              tr
-                td align="center" valign="top"
-                  =link_to(image_tag("icons/facebook_logo.png"), "https://www.facebook.com/pages/Angry-Monkey-Fishing-Lures/140672516118134", { target: "_blank" } )
-                td align="center" valign="top"
-                  =link_to(image_tag("icons/twitter_logo.png"), "https://twitter.com/AngryMonkeyLure", { target: "_blank" } )
-              tr
-                td align="center" valign="top"
-                  =link_to(image_tag("icons/youtube_logo.jpg"), "http://www.youtube.com/user/angrymonkeylures", { target: "_blank" } )
-                td align="center" valign="top"
-                  =link_to(image_tag("icons/gmail_logo.jpg"), "mailto:angrymonkeylures@gmail.com")
-              tr
-                th colspan=2
-                  =link_to("UPCOMING SHOWS", events_path)
-
-    center
-      br
-      br
-      table
-        tr
-          td valign="top"
-            =image_tag("monkey_head.png", size: "96x96")
-          td
-            p.customfont.triangle-border.left "To catch a mean fish, you need a mean lure."
+div.home-quote-text
+  p.customfont.triangle-border.left "To catch a mean fish, you need a mean lure."
