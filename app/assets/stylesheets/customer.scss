@@ -132,6 +132,36 @@ div.lure-dashboard {
 
 }
 
+//
+// lure_types/specifiations
+//
+
+div.lure-specs {
+  @include span-columns(4);
+  @include omega(3n);
+  text-align: center;
+}
+
+div.four {
+  @include span-columns(4);
+}
+
+div.five {
+  @include span-columns(5);
+}
+
+div.seven {
+  @include span-columns(7);
+}
+
+div.eight {
+  @include span-columns(8);
+}
+
+div.twelve {
+  @include span-columns(12);
+}
+
 //////////////////////////////////////
 
 .shadow {
