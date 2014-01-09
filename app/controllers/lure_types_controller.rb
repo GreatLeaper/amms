@@ -1,17 +1,14 @@
 class LureTypesController < ApplicationController
+  before_filter :authenticate_user!,  except: [:index, :show]
 
-  if 1==1
-    layout "customer"
-  else
-    layout "amms"
-  end
+  layout :determine_layout
 
   def index
     @lure_types = LureType.all
-    if 1==1
-      render 'dashboard'
-    else
+    if admin?
       render 'index'
+    else
+      render 'dashboard'
     end
   end
 
