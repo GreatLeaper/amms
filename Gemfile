@@ -26,6 +26,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'devise'
 gem 'fog', '~> 1.3.1'
 gem 'carrierwave'
 
