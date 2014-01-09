@@ -1,4 +1,5 @@
 class HooksController < ApplicationController
+  before_filter :authenticate_user!
 
   layout "amms"
 
