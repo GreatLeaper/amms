@@ -1,8 +1,6 @@
 class ColorsController < ApplicationController
   before_filter :authenticate_user!
 
-  layout "amms"
-
   def index
     @colors = Color.all
   end
@@ -27,7 +25,7 @@ class ColorsController < ApplicationController
   def update
     @color = Color.find(params[:id])
     if @color.update_attributes!(params[:color])
-      redirect_to colors_path, notice: "Color @{@color.name} Updated"
+      redirect_to colors_path, notice: "Color #{@color.name} Updated"
     else
       render :edit
     end
