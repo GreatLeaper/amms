@@ -2,6 +2,11 @@
 @import "neat/neat";
 
 @font-face {
+  font-family: aml_angry_font;
+  src: url('fonts/BLUEHIGL.TTF');
+}
+
+@font-face {
   font-family: aml_header_font;
   src: url('fonts/CFB1 American Patriot Normal.ttf');
   //src: url('fonts/BLUEHIGL.TTF');
@@ -36,6 +41,16 @@ a:hover {
   font-family: aml_default_font, Verdana;
   margin: 20px;
   @include background-image(linear-gradient(top,  #ffffff 0%, #8e857f 18%, #8e857f 82%, #000000 100%));
+}
+
+.notice {
+  color: #000000;
+  text-shadow: 1px 1px #00cc33;
+}
+
+.alert {
+  color: #ffffff;
+  text-shadow: 1px 1px #00cc33;
 }
 
 // MAIN LAYOUT
@@ -142,12 +157,46 @@ div.lure-specs {
   text-align: center;
 }
 
+//
+// login : devise/sessions/new
+//
+
+div.login {
+  text-align: center;
+}
+
+div.login-email {
+  @include span-columns(6);
+  text-align: right;
+}
+
+div.login-password {
+  @include span-columns(6);
+  @include omega;
+  text-align: left;
+}
+
+//
+// AMMS layout
+//
+
+div.left-nav {
+  @include span-columns(2);
+  text-align: center;
+}
+
+////////
+
 div.four {
   @include span-columns(4);
 }
 
 div.five {
   @include span-columns(5);
+}
+
+div.six {
+  @include span-columns(6);
 }
 
 div.seven {
@@ -169,8 +218,8 @@ div.twelve {
   text-shadow: 1px 1px #ffffff
 }
 
-.body h1 {
-  font-family: aml_header_font, Verdana;
+h1 {
+  font-family: aml_angry_font, Verdana;
   font-size: 64px;
   font-weight: normal;
   margin-top: 10px;
