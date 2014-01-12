@@ -1,8 +1,12 @@
-class StaticController < ActionController::Base
+class StaticController < ApplicationController
   protect_from_forgery
-  layout 'customer'
 
   def home
+    if admin?
+      render 'amms'
+    else
+      render 'home'
+    end
   end
 
   def tom

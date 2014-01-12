@@ -1,8 +1,6 @@
 class LureTypesController < ApplicationController
   before_filter :authenticate_user!,  except: [:index, :show]
 
-  layout :determine_layout
-
   def index
     @lure_types = LureType.all
     if admin?
