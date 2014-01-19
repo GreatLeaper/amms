@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140109000226) do
+ActiveRecord::Schema.define(:version => 20140119013349) do
+
+  create_table "bills", :force => true do |t|
+    t.string   "material",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "colors", :force => true do |t|
     t.string   "name",       :null => false
@@ -35,7 +41,6 @@ ActiveRecord::Schema.define(:version => 20140109000226) do
     t.integer  "depth"
     t.integer  "bill_id"
     t.integer  "hook_id"
-    t.integer  "color_id"
     t.string   "image"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

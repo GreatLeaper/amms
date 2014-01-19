@@ -1,21 +1,21 @@
-class LureType < ActiveRecord::Base
+class Bill < ActiveRecord::Base
 
   # for mass assignment
-  attr_accessible :name, :length, :weight, :depth, :description, :image, :hook_id, :bill_id
-
-  # Carrierwave
-  mount_uploader :image, ImageUploader
+  attr_accessible(:material)
 
   # Constants ################################################################
+
+  BILL_MATERIALS = [ 'Stainless Steel', 'Plastic', 'Aluminum', 'Circuit Board' ]
+
   # Validations ##############################################################
 
   # Associations #############################################################
 
-  has_many :lures
-  belongs_to :hook
-  belongs_to :bill
+  has_one :lure_type
 
   # Scopes ###################################################################
+
+  default_scope order(:material)
 
   private
 

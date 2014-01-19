@@ -30,14 +30,11 @@
     =form.text_field :depth, { size: 7 }
 
   div
-    =form.label Hook
-    p "drop down"
+    =form.label "Hook"
+    =form.collection_select :hook_id, Hook.all, :id, :size, include_blank: true
     
   div
     =form.label "Bill"
-    p "drop down"
-    
-
-    p Description of course
+    =form.collection_select :bill_id, Bill.all, :id, :material, include_blank: true
 
   =form.submit

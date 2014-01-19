@@ -152,9 +152,11 @@ div.lure-dashboard {
 //
 
 div.lure-specs {
-  @include span-columns(4);
-  @include omega(3n);
+  @include span-columns(3);
+  @include omega(4n);
   text-align: center;
+
+  padding-top: 50px;
 }
 
 //

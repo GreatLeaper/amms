@@ -1,0 +1,7 @@
+=form_for @bill do |form|
+
+  div
+    =form.label :material
+    =form.select :material, Bill::BILL_MATERIALS
+
+  =form.submit

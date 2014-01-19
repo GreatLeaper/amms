@@ -18,6 +18,7 @@ Amms::Application.routes.draw do
   resources :lures,      only: [:index, :edit, :update, :new, :create, :destroy]
   resources :colors,     only: [:index, :edit, :update, :new, :create, :destroy]
   resources :hooks,      only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :bills,      only: [:index, :edit, :update, :new, :create, :destroy]
 
   # Sample resource route with options:
   #   resources :products do
