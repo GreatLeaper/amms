@@ -1,14 +1,14 @@
 div.lure-specs
-  =image_tag("icons/depth.png", size: "120x120")
-  p= "Max Depth: #{lure_type.depth} feet"
-div.lure-specs
   =image_tag("icons/length.png", size: "120x120")
   p= "Length: #{lure_type.length} inches"
+div.lure-specs
+  =image_tag("icons/hook.png", size: "120x120")
+  p= "Hook: #{lure_type.hook.hook_type} - #{lure_type.hook.size}"
 div.lure-specs
   =image_tag("icons/bill.png", size: "120x120")
   p= "Bill: #{lure_type.bill.material}"
 div.lure-specs
-  =image_tag("icons/hook.png", size: "120x120")
-  p= "Hook: #{lure_type.hook.hook_type} - #{lure_type.hook.size}"
+  =image_tag("icons/depth.png", size: "120x120")
+  p= "Max Depth: #{lure_type.depth} feet"
 div.lure-specs
   br
