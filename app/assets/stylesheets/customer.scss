@@ -160,6 +160,15 @@ div.lure-specs {
 }
 
 //
+// lure_types/edit
+//
+
+div.lure-edit {
+  @include span-columns(6);
+  @include omega(2n);
+}
+
+//
 // login : devise/sessions/new
 //
 

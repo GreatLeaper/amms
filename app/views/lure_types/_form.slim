@@ -1,40 +1,41 @@
 =form_for @lure_type, :html => {multipart: true} do |form|
 
-  div
+  div.lure-edit
     =form.label :name
     =form.text_field :name
-
-  div
+    br
     =form.label :image
     =form.file_field :image
     - if @lure_type.image.present?
       br
-      =image_tag @lure_type.image.url.to_s, size: "200x100"
-      | (not actual size)
-
-  div
-    =form.label :description
+      =image_tag @lure_type.image.url.to_s, size: "300x115"
     br
-    =form.text_area :description
 
-  div
     =form.label 'Length (in)'
     =form.text_field :length, { size: 7 }
+    br
 
-  div
     =form.label 'Weight (oz)'
     =form.text_field :weight, { size: 7 }
+    br
 
-  div
     =form.label 'Depth (feet)'
     =form.text_field :depth, { size: 7 }
+    br
 
-  div
     =form.label "Hook"
     =form.collection_select :hook_id, Hook.all, :id, :size, include_blank: true
+    br
     
-  div
     =form.label "Bill"
     =form.collection_select :bill_id, Bill.all, :id, :material, include_blank: true
 
-  =form.submit
+  div.lure-edit
+    =form.label :description
+    br
+    =form.text_area :description, cols: "60"
+
+  div.lure-edit
+
+  div.lure-edit
+    =form.submit
