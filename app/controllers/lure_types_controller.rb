@@ -2,7 +2,7 @@ class LureTypesController < ApplicationController
   before_filter :authenticate_user!,  except: [:index, :show]
 
   def index
-    @lure_types = LureType.all
+    @lure_types = LureType.order(:weight)
     if admin?
       render 'index'
     else
