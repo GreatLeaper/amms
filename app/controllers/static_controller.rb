@@ -5,6 +5,8 @@ class StaticController < ApplicationController
     if admin?
       render 'amms'
     else
+      @tdm = LureType.where(name: "Tom's Dislocated Minnow").first
+      @fb = LureType.where(name: "Fat Back").first
       render 'home'
     end
   end
