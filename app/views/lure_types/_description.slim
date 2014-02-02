@@ -1,5 +1,7 @@
 div.five style="overflow-y:scroll;height:330px;"
   ==lure_type.description.html_safe
-div.seven style="padding-top:13px"
-  /iframe width="560" height="315" src="//www.youtube.com/embed/Bw4qEPkZpIg?rel=0" frameborder="0" allowfullscreen
-  p Video of this lure in action coming VERY soon!
+div.seven style="padding-top:3px"
+  - if lure_type.present?
+    iframe width="560" height="315" src="//#{lure_type.video_url}" frameborder="0" allowfullscreen
+  - else
+    p "Video of this lure in action coming VERY soon!"

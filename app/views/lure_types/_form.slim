@@ -10,6 +10,9 @@
       br
       =image_tag @lure_type.image.url.to_s, size: "300x115"
     br
+    =form.label :video_url
+    =form.text_field :video_url
+    br
 
     =form.label 'Length (in)'
     =form.text_field :length, { size: 7 }
