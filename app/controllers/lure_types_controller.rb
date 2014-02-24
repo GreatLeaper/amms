@@ -42,8 +42,8 @@ class LureTypesController < ApplicationController
 
   def destroy
     lure_type = LureType.find(params[:id])
-    lure_type.destroy
-    redirect_to :back, notice: "Lure Type #{lure_type.name} deleted."
+    #lure_type.destroy
+    #redirect_to :back, notice: "Lure Type #{lure_type.name} deleted."
   end
 
 end

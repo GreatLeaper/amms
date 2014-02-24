@@ -32,7 +32,7 @@ class LuresController < ApplicationController
     end
   end
 
-  # Don't allow deletion - instead make it inactive?
+  # Don't allow deletion - instead make it inactive
   #def destroy
   #  lure = Lure.find(params[:id])
   #  lure.destroy
