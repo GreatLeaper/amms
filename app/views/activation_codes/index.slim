@@ -1,0 +1,21 @@
+p =link_to 'Create New Code for a Lure', new_activation_code_path
+
+center
+
+  table width="90%"
+    thead
+      tr
+        th Lure
+        th Code
+        th Activated?
+        th Actions
+    tbody
+      - @codes.each do |code|
+        tr
+          td= code.lure.lure_type.name + " - " + code.lure.color.name
+          td= code.code
+          td= code.activated
+          td
+            ul
+              = button_to('Delete', activation_code_path(code), method: :delete, onclick: "return confirm('Are you sure?')")
+

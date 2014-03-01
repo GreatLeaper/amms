@@ -1,0 +1,7 @@
+=form_for @code do |form|
+
+  div
+    =form.label :lure
+    =form.collection_select :lure_id, Lure.all, :id, :code, include_blank: true
+
+  =form.submit

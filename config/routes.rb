@@ -14,11 +14,12 @@ Amms::Application.routes.draw do
   match 'about/' => 'static#tom'
   match 'events/' => 'static#events'
 
-  resources :lure_types, only: [:index, :edit, :update, :new, :create, :destroy, :show]
-  resources :lures,      only: [:index, :edit, :update, :new, :create, :destroy]
-  resources :colors,     only: [:index, :edit, :update, :new, :create, :destroy]
-  resources :hooks,      only: [:index, :edit, :update, :new, :create, :destroy]
-  resources :bills,      only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :lure_types,        only: [:index, :edit, :update, :new, :create, :destroy, :show]
+  resources :lures,             only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :colors,            only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :hooks,             only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :bills,             only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :activation_codes,  only: [:index, :new, :create, :destroy]
 
   # Sample resource route with options:
   #   resources :products do
