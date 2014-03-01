@@ -13,11 +13,15 @@ class ActivationCode < ActiveRecord::Base
 
   # Scopes ###################################################################
 
+  def activated?
+    activated == true
+  end
 
   # Create a UserLure and show the code was activated
   def activate!(code, user_id)
     activation_code = ActivationCode.where(code: code).first
     raise "Unknown Code" if activation_code.blank?
+    raise "Already Activated" if activation_code.activated?
     UserLure.create!(user_id: user_id, lure_id: activation_code.lure_id, activation_code_id: activation_code.id)
   end
 

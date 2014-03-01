@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140223201358) do
+ActiveRecord::Schema.define(:version => 20140301225834) do
 
   create_table "activation_codes", :force => true do |t|
     t.string   "code",                          :null => false
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20140223201358) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
+
+  add_index "activation_codes", ["code"], :name => "index_activation_codes_on_code"
 
   create_table "bills", :force => true do |t|
     t.string   "material",   :null => false
@@ -67,6 +69,14 @@ ActiveRecord::Schema.define(:version => 20140223201358) do
   end
 
   add_index "lures", ["code"], :name => "index_lures_on_code", :unique => true
+
+  create_table "user_lures", :force => true do |t|
+    t.integer  "user_id",         :null => false
+    t.integer  "lure_id",         :null => false
+    t.string   "activation_code"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

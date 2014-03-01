@@ -1,19 +1,15 @@
-class Lure < ActiveRecord::Base
+class UserLure < ActiveRecord::Base
 
   # for mass assignment
-  attr_accessible :code, :lure_type_id, :color_id, :active, :image
-
-  # Carrierwave
-  mount_uploader :image, ImageUploader
+  attr_accessible :user_id, :lure_id, :activation_code
 
   # Constants ################################################################
   # Validations ##############################################################
 
   # Associations #############################################################
 
-  belongs_to :lure_type
-  belongs_to :color
-  has_many :user_lures
+  belongs_to :user
+  belongs_to :lure
 
   # Scopes ###################################################################
 
