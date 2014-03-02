@@ -3,10 +3,10 @@ class LureTypesController < ApplicationController
 
   def index
     @lure_types = LureType.order(:weight)
-    if admin?
-      render 'index'
-    else
+    if current_user.nil?
       render 'dashboard'
+    elsif current_user.admin?
+      render 'index'
     end
   end
 

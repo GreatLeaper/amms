@@ -6,15 +6,15 @@ class ApplicationController < ActionController::Base
   protected
 
   def determine_layout
-    if admin?
-      "amms"
-   else
+    if current_user.nil?
       "customer"
+   elsif current_user.admin?
+      "amms"
     end
   end
 
-  def admin?
-    user_signed_in?
-  end
+  #def admin?
+  #  user_signed_in?
+  #end
 
 end

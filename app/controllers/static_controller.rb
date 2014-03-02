@@ -2,12 +2,12 @@ class StaticController < ApplicationController
   protect_from_forgery
 
   def home
-    if admin?
-      render 'amms'
-    else
+    if current_user.nil?
       @tdm = LureType.where(name: "Tom's Dislocated Minnow").first
       @fb = LureType.where(name: "Fat Back").first
       render 'home'
+    elsif  current_user.admin?
+      render 'amms'
     end
   end
 
