@@ -11,8 +11,19 @@ class User < ActiveRecord::Base
     :validatable )
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :role
 
   has_many :user_lures
   
+  ROLES = [
+    'admin',
+    'fisherman'
+  ]
+
+  ROLES.each do |role|
+    define_method "#{role.downcase.gsub(" ", "_")}?" do
+     self.role == role
+    end
+  end
+
 end
