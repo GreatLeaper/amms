@@ -13,6 +13,7 @@ Amms::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
   match 'about/' => 'static#tom'
   match 'events/' => 'static#events'
+  match 'store/' => 'static#store'
 
   resources :lure_types, only: [:index, :edit, :update, :new, :create, :destroy, :show]
   resources :lures,      only: [:index, :edit, :update, :new, :create, :destroy]
