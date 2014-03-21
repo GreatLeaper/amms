@@ -1,0 +1,17 @@
+table width="100%"
+  thead
+    tr
+      th Lure
+      th Image
+      th Actions
+  tbody
+    - @user_lures.each do |user_lure|
+      tr
+        td= user_lure.lure.lure_type.name
+        - if user_lure.lure.image.present?
+          td= image_tag user_lure.lure.image.url.to_s, size: "100x50"
+        - else
+          td= "<none>"
+        td
+          ul
+            = "Retire"

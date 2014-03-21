@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::Base
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
+  end
+
   protect_from_forgery
 
   layout :determine_layout
@@ -8,13 +12,11 @@ class ApplicationController < ActionController::Base
   def determine_layout
     if current_user.nil?
       "customer"
+   elsif current_user.fisherman?
+      "fisherman"
    elsif current_user.admin?
       "amms"
     end
   end
-
-  #def admin?
-  #  user_signed_in?
-  #end
 
 end

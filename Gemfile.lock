@@ -34,6 +34,7 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    cancan (1.6.8)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -158,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon (~> 3.1.4)
+  cancan
   carrierwave
   coffee-rails (~> 3.2.1)
   compass-rails

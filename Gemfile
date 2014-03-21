@@ -29,6 +29,7 @@ end
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'cancan'
 gem 'fog', '~> 1.3.1'
 gem 'carrierwave'
 

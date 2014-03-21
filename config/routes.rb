@@ -21,6 +21,8 @@ Amms::Application.routes.draw do
   resources :bills,             only: [:index, :edit, :update, :new, :create, :destroy]
   resources :activation_codes,  only: [:index, :new, :create, :destroy]
 
+  resources :user_lures,        only: [:index, :create, :destroy, :show]
+
   # Sample resource route with options:
   #   resources :products do
   #     member do

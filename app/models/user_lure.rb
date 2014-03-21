@@ -13,6 +13,11 @@ class UserLure < ActiveRecord::Base
 
   # Scopes ###################################################################
 
+  def deactivate!
+  	self.active == false
+  	save!
+  end
+
   private
 
 end

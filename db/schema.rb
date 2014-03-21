@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140302004533) do
+ActiveRecord::Schema.define(:version => 20140302181009) do
 
   create_table "activation_codes", :force => true do |t|
     t.string   "code",                          :null => false
@@ -71,11 +71,12 @@ ActiveRecord::Schema.define(:version => 20140302004533) do
   add_index "lures", ["code"], :name => "index_lures_on_code", :unique => true
 
   create_table "user_lures", :force => true do |t|
-    t.integer  "user_id",         :null => false
-    t.integer  "lure_id",         :null => false
+    t.integer  "user_id",                           :null => false
+    t.integer  "lure_id",                           :null => false
     t.string   "activation_code"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.boolean  "active",          :default => true
   end
 
   create_table "users", :force => true do |t|

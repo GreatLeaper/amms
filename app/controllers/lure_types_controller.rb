@@ -1,5 +1,6 @@
 class LureTypesController < ApplicationController
   before_filter :authenticate_user!,  except: [:index, :show]
+  load_and_authorize_resource
 
   def index
     @lure_types = LureType.order(:weight)
