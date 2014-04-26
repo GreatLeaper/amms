@@ -3,50 +3,52 @@ div.kcenter.kpanel
   div style="text-align:center;overflow: hidden"
 
     br
-    br
-    br
 
     h2=@lure_type.name
 
-    =image_tag @lure_type.image.url.to_s, width: "600px"
-
-    br
+    p
     br
 
-  div
+    div style="margin:0 auto;padding-top:20px;width:600px;"
 
-    div#tab-container.tab-container
-      ul.etabs
-        li.tab
-          =link_to "Description", "#description"
-        li.tab
-          =link_to "Specifications", "#specs"
-        li.tab
-          =link_to "Colors", "#colors"
-        li.tab
-          =link_to "Tips & Tricks", "#tips"
-        li.tab
-          =link_to "Lure User Statistics", "#stats"
-      div.panel-container style="height:338px;overflow: hidden"
-        div#description
-          div style="height:338px;"
-            div style="height:100%;overflow-y:scroll;"
-              =render partial: 'lure_types/description', locals: { lure_type: @lure_type }
-        div#specs
-          div style="height:338px;"
-            div style="height:100%;"
-              =render partial: 'lure_types/specifications', locals: { lure_type: @lure_type }
-        div#colors
-          div style="height:338px;"
-            div style="height:100%;"
-              =render partial: 'lure_types/colors', locals: { lures: @lure_type.lures }
-        div#tips
-          div style="height:338px;"
-            div style="height:100%;overflow-y:scroll;"
-              =render partial: 'lure_types/tips', locals: { lure: @lure_type }
-        div#stats
-          div style="height:338px;"
-            div style="height:100%;"
-              br
-              h6 Coming end of 2014....
-              p Statistics tracking the use of this lure....
+      ul#rb-colors
+
+        - @lure_type.lures.each do |lure|
+          li
+            = image_tag(lure.image.url.to_s, { width: "550px" })
+            
+            h5 style="margin-top: -13px;"= "#{lure.color.name}"
+            div
+              span.button style="color:#ff0000"
+                = link_to "Buy Me!", "http://angrymonkeystore.com#{lure.store_url}", { target: "_blank"}
+
+    div style="height:200px"
+      br
+      div.lure-specs
+        =image_tag("icons/length.png", size: "100x100")
+        p= "Length: #{@lure_type.length} inches"
+      div.lure-specs
+        =image_tag("icons/hook.png", size: "100x100")
+        p= "Hook: #{@lure_type.hook.hook_type} - #{@lure_type.hook.size}"
+      div.lure-specs
+        =image_tag("icons/bill.png", size: "100x100")
+        p= "Bill: #{@lure_type.bill.material}"
+      div.lure-specs
+        =image_tag("icons/depth.png", size: "100x100")
+        p= "Max Depth: #{@lure_type.depth} feet"
+      div.lure-specs
+        br
+
+    p
+    div style="position:absolute;"
+      hr
+
+    div.lure-description-left
+      ==@lure_type.description.html_safe
+    div.lure-description-right
+      - if @lure_type.present?
+        iframe width="560" height="315" src="//#{@lure_type.video_url}" frameborder="0" allowfullscreen
+      - else
+        p "Video of this lure in action coming VERY soon!"
+
+    br

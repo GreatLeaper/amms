@@ -1,0 +1,52 @@
+div.kcenter.kpanel
+
+  div style="text-align:center;overflow: hidden"
+
+    br
+    br
+    br
+
+    h2=@lure_type.name
+
+    =image_tag @lure_type.image.url.to_s, width: "600px"
+
+    br
+    br
+
+  div
+
+    div#tab-container.tab-container
+      ul.etabs
+        li.tab
+          =link_to "Description", "#description"
+        li.tab
+          =link_to "Specifications", "#specs"
+        li.tab
+          =link_to "Colors", "#colors"
+        li.tab
+          =link_to "Tips & Tricks", "#tips"
+        li.tab
+          =link_to "Lure User Statistics", "#stats"
+      div.panel-container style="height:338px;overflow: hidden"
+        div#description
+          div style="height:338px;"
+            div style="height:100%;overflow-y:scroll;"
+              =render partial: 'lure_types/description', locals: { lure_type: @lure_type }
+        div#specs
+          div style="height:338px;"
+            div style="height:100%;"
+              =render partial: 'lure_types/specifications', locals: { lure_type: @lure_type }
+        div#colors
+          div style="height:338px;"
+            div style="height:100%;"
+              =render partial: 'lure_types/colors', locals: { lures: @lure_type.lures }
+        div#tips
+          div style="height:338px;"
+            div style="height:100%;overflow-y:scroll;"
+              =render partial: 'lure_types/tips', locals: { lure: @lure_type }
+        div#stats
+          div style="height:338px;"
+            div style="height:100%;"
+              br
+              h6 Coming end of 2014....
+              p Statistics tracking the use of this lure....

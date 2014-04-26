@@ -24,4 +24,8 @@
     =form.label Color
     =form.collection_select :color_id, Color.all, :id, :name, include_blank: true
 
+  div
+    =form.label :store_url
+    =form.text_field :store_url
+
   =form.submit

@@ -9,5 +9,5 @@ $(document).ready(function(){
   $('#tab-container').easytabs();
 
   // Colors Roundabout
-  $('#rb-colors').roundabout({ minOpacity: .4 });
+  $('#rb-colors').roundabout({ minOpacity: 0.4, tilt: -1.0 });
 });
