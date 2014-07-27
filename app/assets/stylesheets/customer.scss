@@ -147,15 +147,10 @@ div.home-quote-text {
   @include omega;
 }
 
-div.connect-left {
-  @include span-columns(2 of 4);
+div.connect-social {
+  @include span-columns(4 of 4);
   text-align: center;
-}
-
-div.connect-right {
-  @include span-columns(2 of 4);
-  text-align: center;
-  @include omega;
+  padding: 5px;
 }
 
 div.connect-bottom {
@@ -405,4 +400,3 @@ table td {
   font-size:12px;
   color: #ffffff;
 }
-
