@@ -16,11 +16,8 @@ div.kcenter.kpanel
         - @lure_type.lures.each do |lure|
           li
             = image_tag(lure.image.url.to_s, { width: "550px" })
-            
+
             h5 style="margin-top: -13px;"= "#{lure.color.name}"
-            div
-              span.button style="color:#ff0000"
-                = link_to "Buy Me!", "http://angrymonkeystore.com#{lure.store_url}", { target: "_blank"}
 
     div style="height:200px"
       br
