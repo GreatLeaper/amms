@@ -12,7 +12,7 @@ head
   / meta http-equiv="X-UA-Compatible" content="IE=7"
 
   = favicon_link_tag 'favicon.ico'
- 
+
   / Set the viewport width to device width for mobile
   meta name="viewport" content="width=device-width, initial-scale=1.0"
 
@@ -30,11 +30,11 @@ body.body
     div.menubar
       =link_to("Home", root_path)
       =" "
-      =link_to("Store", "http://angrymonkeystore.com")
-      =" "
       =link_to("Lures", lure_types_path)
       =" "
       =link_to("About", about_path)
+      =" "
+      =link_to("Where-Sold?", stores_path)
       =" "
       =link_to("Login", new_user_session_path)
 
