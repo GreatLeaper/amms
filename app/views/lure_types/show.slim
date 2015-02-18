@@ -1,4 +1,4 @@
-div.kcenter.kpanel
+div.kcenter.kpanel style="min-width:700px"
 
   div style="text-align:center;overflow: hidden"
 
@@ -7,17 +7,6 @@ div.kcenter.kpanel
     h2=@lure_type.name
 
     p
-    br
-
-    div style="margin:0 auto;padding-top:20px;width:600px;"
-
-      ul#rb-colors
-
-        - @lure_type.lures.each do |lure|
-          li
-            = image_tag(lure.image.url.to_s, { width: "550px" })
-
-            h5 style="margin-top: -13px;"= "#{lure.color.name}"
 
     div style="height:200px"
       br
@@ -49,3 +38,24 @@ div.kcenter.kpanel
         p "Video of this lure in action coming VERY soon!"
 
     br
+
+div.kcenter.kpanel style="min-width:700px"
+
+  div style="text-align:center;overflow: hidden"
+    h2 Colors
+    hr
+
+  div.center style="margin:0 auto;width:90%;"
+
+    - @lure_type.lures.each do |lure|
+
+      div.colors-left
+        = image_tag(lure.image.url.to_s, { width: "50%", height: "50%" })
+
+        div.colors-right
+          h5=lure.color.name
+
+          form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"
+            input name="cmd" type="hidden" value="_s-xclick"
+            input name="hosted_button_id" type="hidden" value="FXMF5AAQFAECJ"
+            input border="0" name="submit" src="/assets/buttons/add_to_cart-small.png" type="image"

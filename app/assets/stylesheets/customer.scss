@@ -224,6 +224,22 @@ div.lure-edit {
 }
 
 //
+// lure_types/show
+//
+
+div.colors-left {
+  text-align: center;
+  min-width: 650px;
+}
+
+div.colors-right {
+  box-shadow: 1px 1px 10px 1px;
+  float: right;
+  margin: 2% 0 0 0;
+  min-width: 260px;
+}
+
+//
 // login : devise/sessions/new
 //
 
