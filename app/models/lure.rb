@@ -1,7 +1,7 @@
 class Lure < ActiveRecord::Base
 
   # for mass assignment
-  attr_accessible :code, :lure_type_id, :color_id, :active, :image, :store_url
+  attr_accessible :code, :lure_type_id, :color_id, :active, :image, :paypal_button_id
 
   # Carrierwave
   mount_uploader :image, ImageUploader

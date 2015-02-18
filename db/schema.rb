@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140425191117) do
+ActiveRecord::Schema.define(:version => 20150218170555) do
 
   create_table "activation_codes", :force => true do |t|
     t.string   "code",                          :null => false
@@ -59,14 +59,14 @@ ActiveRecord::Schema.define(:version => 20140425191117) do
   end
 
   create_table "lures", :force => true do |t|
-    t.string   "code",                            :null => false
-    t.integer  "lure_type_id",                    :null => false
+    t.string   "code",                                :null => false
+    t.integer  "lure_type_id",                        :null => false
     t.integer  "color_id"
-    t.boolean  "active",       :default => false
+    t.boolean  "active",           :default => false
     t.string   "image"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-    t.string   "store_url"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.string   "paypal_button_id"
   end
 
   add_index "lures", ["code"], :name => "index_lures_on_code", :unique => true
