@@ -32,10 +32,10 @@ div.kcenter.kpanel style="min-width:700px"
     div.lure-description-left
       ==@lure_type.description.html_safe
     div.lure-description-right
-      - if @lure_type.present?
+      - if @lure_type.video_url.present?
         iframe width="560" height="315" src="//#{@lure_type.video_url}" frameborder="0" allowfullscreen
       - else
-        p "Video of this lure in action coming VERY soon!"
+        p.video-frame Video of this lure in action coming soon!
 
     br
 
@@ -55,7 +55,7 @@ div.kcenter.kpanel style="min-width:700px"
         div.colors-right
           h5=lure.color.name
 
-          - if lure.paypal_button_id
+          - if lure.paypal_button_id.present?
             form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"
               input name="cmd" type="hidden" value="_s-xclick"
               input name="hosted_button_id" type="hidden" value=lure.paypal_button_id
