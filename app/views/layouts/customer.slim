@@ -29,14 +29,21 @@ body.body
 
     div.menubar
       =link_to("Home", root_path)
-      =" "
+      =" | "
       =link_to("Lures", lure_types_path)
-      =" "
-      =link_to("About", about_path)
-      =" "
+      =" | "
       =link_to("Where-Sold?", stores_path)
-      =" "
+      =" | "
+      =link_to("About", about_path)
+      =" | "
       =link_to("Login", new_user_session_path)
+      =" | "
+      span
+        form style="display:block;margin:-30px -30px 0 0;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"
+          input name="cmd" type="hidden" value="_s-xclick"
+          input name="encrypted" type="hidden" value=("-----BEGIN PKCS7-----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-----END PKCS7-----\n")
+          input border="0" name="submit" src="/assets/buttons/cart.png" type="image"
+
 
     hr
 
@@ -46,4 +53,4 @@ body.body
   = javascript_include_tag "application"
 
 footer.footer
-  p &copy; Copyright 2014 Angry Monkey Fishing Lures LLC.
+  p &copy; Copyright 2015 Angry Monkey Fishing Lures LLC.
