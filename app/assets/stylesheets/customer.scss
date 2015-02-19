@@ -171,13 +171,13 @@ div.connect-bottom {
 //
 
 div.lure-dashboard {
-  @include span-columns(4);
-  @include omega(3n);
+  @include span-columns(6);
+  @include omega(2n);
   text-align: center;
 
   a:hover {
     @include transition(all 500ms ease-in-out);
-    text-shadow: 1px 1px #8e857f;
+    text-shadow: 1px 1px #00e1e1;
   }
 
 }

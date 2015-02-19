@@ -55,7 +55,10 @@ div.kcenter.kpanel style="min-width:700px"
         div.colors-right
           h5=lure.color.name
 
-          form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"
-            input name="cmd" type="hidden" value="_s-xclick"
-            input name="hosted_button_id" type="hidden" value="FXMF5AAQFAECJ"
-            input border="0" name="submit" src="/assets/buttons/add_to_cart-small.png" type="image"
+          - if lure.paypal_button_id
+            form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"
+              input name="cmd" type="hidden" value="_s-xclick"
+              input name="hosted_button_id" type="hidden" value=lure.paypal_button_id
+              input border="0" name="submit" src="/assets/buttons/add_to_cart-small.png" type="image"
+          - else
+            p Out of Stock
