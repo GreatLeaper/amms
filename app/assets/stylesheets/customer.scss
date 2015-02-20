@@ -106,7 +106,8 @@ div.home-header {
 div.menubar {
   @include span-columns(12);
   text-align: right;
-  float: none;
+  float: right;
+  padding-right: 14px;
 }
 
 div.content {
@@ -171,13 +172,13 @@ div.connect-bottom {
 //
 
 div.lure-dashboard {
-  @include span-columns(4);
-  @include omega(3n);
+  @include span-columns(6);
+  @include omega(2n);
   text-align: center;
 
   a:hover {
     @include transition(all 500ms ease-in-out);
-    text-shadow: 1px 1px #8e857f;
+    text-shadow: 1px 1px #00e1e1;
   }
 
 }
@@ -199,7 +200,7 @@ div.lure-specs {
 //
 
 div.lure-description-left {
-  margin: -17px 10px 0 10px;
+  margin: 0px 10px 0 10px;
   position: absolute;
   text-align:justify;
   @include span-columns(5);
@@ -221,6 +222,22 @@ div.lure-description-right {
 div.lure-edit {
   @include span-columns(6);
   @include omega(2n);
+}
+
+//
+// lure_types/show
+//
+
+div.colors-left {
+  text-align: center;
+  min-width: 650px;
+}
+
+div.colors-right {
+  box-shadow: 1px 1px 10px 1px;
+  float: right;
+  margin: 2% 0 0 0;
+  min-width: 260px;
 }
 
 //
@@ -357,6 +374,14 @@ table td {
 
 }
 
+.video-frame {
+  box-shadow: 0px 0px 10px 0px;
+  height: 315px;
+  line-height: 315px;
+  width: 560px;
+  margin: 20px;
+}
+
 ////////////////////////////////////////////
 // HEADER
 ////////////////////////////////////////////
@@ -399,4 +424,11 @@ table td {
   margin:16px 0;
   font-size:12px;
   color: #ffffff;
+}
+
+.footer div a {
+  margin:-36px 11px 0 0;
+  float: right;
+  font-size:10px;
+  color: #aaaaaa;
 }
