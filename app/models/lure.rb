@@ -16,6 +16,9 @@ class Lure < ActiveRecord::Base
 
   # Scopes ###################################################################
 
+  default_scope order(:code)
+  scope :active, -> { where(active: true) }
+
   private
 
 end

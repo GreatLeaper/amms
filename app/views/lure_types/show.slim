@@ -47,7 +47,7 @@ div.kcenter.kpanel style="min-width:700px"
 
   div.center style="margin:0 auto;width:90%;"
 
-    - @lure_type.lures.each do |lure|
+    - @lure_type.lures.active.each do |lure|
 
       div.colors-left
         = image_tag(lure.image.url.to_s, { width: "50%", height: "50%" })

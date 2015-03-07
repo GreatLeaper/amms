@@ -17,6 +17,8 @@ class LureType < ActiveRecord::Base
 
   # Scopes ###################################################################
 
+  default_scope order(:name)
+
   private
 
 end
