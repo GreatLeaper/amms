@@ -11,9 +11,10 @@ Amms::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-  match 'about/'  => 'static#tom'
-  match 'events/' => 'static#events'
-  match 'stores/' => 'static#stores'
+  match 'about/'      => 'static#tom'
+  match 'events/'     => 'static#events'
+  match 'stores/'     => 'static#stores'
+  match 'contact_us/' => 'static#contact_us'
 
   resources :lure_types, only: [:index, :edit, :update, :new, :create, :destroy, :show]
   resources :lures,      only: [:index, :edit, :update, :new, :create, :destroy]
