@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.1.4'
 
 gem 'rails', '3.2.13'
 
@@ -39,4 +39,3 @@ gem 'slim' # templating
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
