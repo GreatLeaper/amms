@@ -1,8 +1,5 @@
 class LureType < ActiveRecord::Base
 
-  # for mass assignment
-  attr_accessible :name, :length, :weight, :depth, :description, :image, :hook_id, :bill_id, :video_url
-
   # Carrierwave
   mount_uploader :image, ImageUploader
 
@@ -17,7 +14,7 @@ class LureType < ActiveRecord::Base
 
   # Scopes ###################################################################
 
-  default_scope order(:name)
+  default_scope { order(:name) }
 
   private
 

@@ -10,7 +10,7 @@ class HooksController < ApplicationController
   end
 
   def create
-    @hook = Hook.new(params[:hook])
+    @hook = Hook.new(hook_params)
     if @hook.save
       redirect_to hooks_path, notice: "Hook #{@hook.size} Created"
     else
@@ -24,7 +24,7 @@ class HooksController < ApplicationController
 
   def update
     @hook = Hook.find(params[:id])
-    if @hook.update_attributes!(params[:hook])
+    if @hook.update_attributes!(hook_params)
       redirect_to hooks_path, notice: "Hook #{@hook.size} Updated"
     else
       render :edit
@@ -37,4 +37,9 @@ class HooksController < ApplicationController
     redirect_to :back, notice: "Hook #{hook.size} deleted."
   end
 
+  private
+
+  def hook_params
+    params.require(:hook).permit(:hook_type, :size)
+  end
 end

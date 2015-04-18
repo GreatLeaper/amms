@@ -1,8 +1,5 @@
 class Color < ActiveRecord::Base
 
-  # for mass assignment
-  attr_accessible(:name)
-
   # Constants ################################################################
   # Validations ##############################################################
 
@@ -12,7 +9,7 @@ class Color < ActiveRecord::Base
 
   # Scopes ###################################################################
 
-  default_scope order(:name)
+  default_scope { order(:name) }
 
   private
 

@@ -19,7 +19,7 @@ class LureTypesController < ApplicationController
   end
 
   def create
-    @lure_type = LureType.new(params[:lure_type])
+    @lure_type = LureType.new(lure_type_params)
     if @lure_type.save
       redirect_to lure_types_path, notice: "Lure Type #{@lure_type.name} Created"
     else
@@ -33,7 +33,7 @@ class LureTypesController < ApplicationController
 
   def update
     @lure_type = LureType.find(params[:id])
-    if @lure_type.update_attributes!(params[:lure_type])
+    if @lure_type.update_attributes!(lure_type_params)
       redirect_to lure_types_path, notice: "Lure Type #{@lure_type.name} Updated"
     else
       render :edit
@@ -46,4 +46,9 @@ class LureTypesController < ApplicationController
     redirect_to :back, notice: "Lure Type #{lure_type.name} deleted."
   end
 
+  private
+
+  def lure_type_params
+    params.require(:lure_type).permit(:name, :length, :weight, :depth, :description, :image, :hook_id, :bill_id, :video_url)
+  end
 end

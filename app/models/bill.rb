@@ -1,8 +1,5 @@
 class Bill < ActiveRecord::Base
 
-  # for mass assignment
-  attr_accessible(:material)
-
   # Constants ################################################################
 
   BILL_MATERIALS = [ 'Stainless Steel', 'Plastic', 'Aluminum', 'Circuit Board' ]
@@ -15,7 +12,7 @@ class Bill < ActiveRecord::Base
 
   # Scopes ###################################################################
 
-  default_scope order(:material)
+  default_scope { order(:material) }
 
   private
 
