@@ -22,7 +22,6 @@ gem 'neat'
 # gem 'therubyracer', :platforms => :ruby
 gem 'uglifier'
 
-
 gem 'jquery-rails'
 
 gem 'devise'

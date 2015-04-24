@@ -28,7 +28,7 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   # Do not compress assets
-  config.assets.compress = false
+  # config.assets.compress = false
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
