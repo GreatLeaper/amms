@@ -3,18 +3,17 @@
 
 @font-face {
   font-family: aml_angry_font;
-  src: url('fonts/BLUEHIGL.TTF');
+  src: font-url('fonts/BLUEHIGL.TTF');
 }
 
 @font-face {
   font-family: aml_header_font;
-  src: url('fonts/CFB1 American Patriot Normal.ttf');
-  //src: url('fonts/BLUEHIGL.TTF');
+  src: font-url('fonts/CFB1AmericanPatriotNormal.ttf');
 }
 
 @font-face {
   font-family: aml_default_font;
-  src: url('fonts/ArchitectsDaughter.ttf');
+  src: font-url('fonts/ArchitectsDaughter.ttf');
 }
 
 a {
