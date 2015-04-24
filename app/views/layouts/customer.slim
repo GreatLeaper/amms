@@ -19,6 +19,7 @@ head
   title= content_for?(:title) ? yield(:title) : "Angry Monkey Fishing Lures"
 
   = stylesheet_link_tag "application"
+  = javascript_include_tag :defaults
   = csrf_meta_tag
 
 body.body

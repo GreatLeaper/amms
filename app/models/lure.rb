@@ -1,8 +1,5 @@
 class Lure < ActiveRecord::Base
 
-  # for mass assignment
-  attr_accessible :code, :lure_type_id, :color_id, :active, :image, :paypal_button_id
-
   # Carrierwave
   mount_uploader :image, ImageUploader
 
@@ -16,7 +13,7 @@ class Lure < ActiveRecord::Base
 
   # Scopes ###################################################################
 
-  default_scope order(:code)
+  default_scope { order(:code) }
   scope :active, -> { where(active: true) }
 
   private

@@ -10,7 +10,7 @@ class BillsController < ApplicationController
   end
 
   def create
-    @bill = Bill.new(params[:bill])
+    @bill = Bill.new(bill_params)
     if @bill.save
       redirect_to bills_path, notice: "Bill #{@bill.material} Created"
     else
@@ -24,7 +24,7 @@ class BillsController < ApplicationController
 
   def update
     @bill = Bill.find(params[:id])
-    if @bill.update_attributes!(params[:bill])
+    if @bill.update_attributes!(bill_params)
       redirect_to bills_path, notice: "Bill #{@bill.material} Updated"
     else
       render :edit
@@ -37,4 +37,9 @@ class BillsController < ApplicationController
     redirect_to :back, notice: "Bill #{bill.material} deleted."
   end
 
+  private
+
+  def bill_params
+    params.require(:bill).permit(:material)
+  end
 end
