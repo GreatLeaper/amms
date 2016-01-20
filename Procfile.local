@@ -1,0 +1,2 @@
+#postgres: postgres -D /Users/mauricio/databases/postgresql
+rails: bundle exec rails s
