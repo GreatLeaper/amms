@@ -15,7 +15,7 @@ gem 'thin'
 # in production environments by default.
 gem 'sass-rails'
 gem 'coffee-rails'
-gem 'compass-rails'
+# gem 'compass-rails' # Don't think i'll need this - not sure.  Probs until it is merged with sprockets.  See https://github.com/rails/sass-rails/issues/324 
 gem 'bourbon'
 gem 'neat'
 gem 'rails_12factor', group: :production
