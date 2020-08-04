@@ -2,7 +2,7 @@ class LuresController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @lures = Lure.all
+    @lures = Lure.active.all
     render 'index'
   end
 
